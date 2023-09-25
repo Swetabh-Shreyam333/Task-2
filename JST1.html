@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7</title>
+    <style>
+        body{
+            padding: 2rem;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <label class="" for="number">Input number x: </label>
+    <input type="text" id="number" name="number" style="font-size: 1.2rem;">
+    <br>
+    <button style="font-size: 1.1rem;" onclick="reverse()">Reverse</button>
+    <br>
+    <br>
+    <p>Reversed number: <span id="rev-num"></span></p>
+    <script>
+        function reverse() {
+            var num = parseInt(document.getElementById("number").value);
+            if (isNaN(num)){
+                alert("Please input a valid number");
+                return;
+            }
+            var rev = 0;
+            while (num > 0){
+                rev *= 10;
+                rev += num % 10;
+                num = Math.floor(num / 10);
+            }
+            document.getElementById("rev-num").innerText = rev;
+        }
+    </script>
+</body>
+</html>

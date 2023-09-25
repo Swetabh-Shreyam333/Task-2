@@ -1,0 +1,62 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.holder{
+    height:700px;
+    width:650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgb(246,241,188);
+    background: linear-gradient(180deg, rgba(246,241,188,1) 0%, rgba(238,191,181,1) 31%, rgba(221,126,187,1) 100%);
+}
+
+.container{
+    
+    text-align: center;
+    width:100%;
+}
+
+.lab{
+    margin-right: 30px;
+    font-weight:600;
+}
+
+.inp{
+    width:500px;
+}
+
+.hor{
+    display: flex;
+    width: 100%;
+}
+
+.gender{
+    margin-left:25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.femrad{
+    margin-left:15px;
+}
+
+.radbut{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+

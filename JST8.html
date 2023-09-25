@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JST-8</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/stylej8.css">
+</head>
+<body>
+    <div class="container holder">
+        <div class="container my-2" style="color:blue"><h2>Registeration Form</h2></div>
+        <div class="container">
+            <label class="lab" for="fname">First Name:&nbsp; &nbsp;</label>
+            <input class ="inp inp2" type="text" id="fname">
+        </div>
+        <div class="container">
+            <label class="lab" for="lname">Last Name:&nbsp; &nbsp;</label>
+            <input class ="inp inp2" type="text" id="lname">
+        </div>
+        <div class="container">
+            <label class="lab" for="email">Email :&nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  </label>
+            <input class ="inp inp2" type="email" id="email">
+        </div>
+        <div class="container">
+            <label class="lab" for="email">Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input class ="inp inp2" type="password" id="email">
+        </div>
+        <div class="container">
+            <label class="lab" for="repass">RePassword:</label>
+            <input class ="inp inp2" type="password" id="repass">
+        </div>
+        <div class="container">
+            <div class="hor">
+                <div class="gender"><label for="gender" class="lab">Gender:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</label></div>
+                <div class="radbut">
+                    <div><input class="inp2" name="gender" type="radio">&nbsp;Male</div>
+                    <div><input name="gender" class="femrad inp2" type="radio">&nbsp;Female</div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <label class="lab" for="age">Age: &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+            <input class ="inp inp2" type="number" id="age">
+        </div>
+        <div class="container">
+            <label class="lab" for="phone">Phone: &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input class ="inp inp2" type="number" id="phone">
+        </div>
+        <div class="container hor">
+            <label class="lab my-5" for="Address" style="margin-left: 25px; margin-right: 35px;">Address: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <textarea name="Address" class="inp2" id="" cols="54" rows="5"></textarea>
+        </div>
+        <div class="container">
+            <label class="lab" for="state">State:&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input class ="inp inp2" type="text" id="state">
+        </div>
+        <div class="container">
+            <label class="lab" for="Country" style="position:absolute; left:168px;">Country: &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <select name="Country" class="inp2" id="Country" style="position: relative; right:100px;">
+                <option value="">Choose your country</option>
+                <option value="India">India</option>
+                <option value="Spain">Spain</option>
+                <option value="China">China</option>
+                <option value="UAE">UAE</option>
+                <option value="Russia">Russia</option>
+              </select>
+        <div class="container">
+            <label for="language" class="lab my-3" style="position: relative; right:100px;">Languages known:</label>
+            <label><input class = "inp2" type="checkbox" name="language" value="English"> English</label>
+            <label><input class = "inp2"type="checkbox" name="language" value="Kannada"> Kannada</label>
+            <label><input class = "inp2"type="checkbox" name="language" value="Hindi"> Hindi</label>
+            <label><input class = "inp2"type="checkbox" name="language" value="Telugu"> Telugu</label>
+        </div>
+        <div class="container">
+            <label style="position: relative; right:150px;"><input class="inp2" type="checkbox" name="language" style="position: relative; right:5px;" value="English"> Hereby I declare all the given details are true</label>
+        </div>
+        <div class="container"><p>Login to <a href="https://codemithra.com">Ethnus</a> website</p></div>
+        <div class="container">
+            <button class="button my-2" style="border-radius: 100px; width:100px; background-color: #F24522; color: white;">Register</button>
+        </div>
+      </div>
+    <script src="script/JST8.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
