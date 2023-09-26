@@ -1,86 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JST-8</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/stylej8.css">
+    <title>Document</title>
+    <style>
+        html {
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        body {
+            background-image: linear-gradient(to bottom right, #FEFFD7, #D060E1);
+            background-repeat: no-repeat;
+        }
+
+        table {
+            margin: auto;
+        }
+
+        input[type=text],
+        textarea {
+            width: 400px;
+        }
+
+        td:first-child {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        td:last-child {
+            color: red;
+        }
+
+        .hide {
+            visibility: hidden;
+        }
+        button {
+            background-color: red;
+            padding: 2px 10px;
+            width: 120px;
+            border: solid 2px black;
+            border-radius: 20px;
+        }
+        button:hover {
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container holder">
-        <div class="container my-2" style="color:blue"><h2>Registeration Form</h2></div>
-        <div class="container">
-            <label class="lab" for="fname">First Name:&nbsp; &nbsp;</label>
-            <input class ="inp inp2" type="text" id="fname">
-        </div>
-        <div class="container">
-            <label class="lab" for="lname">Last Name:&nbsp; &nbsp;</label>
-            <input class ="inp inp2" type="text" id="lname">
-        </div>
-        <div class="container">
-            <label class="lab" for="email">Email :&nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  </label>
-            <input class ="inp inp2" type="email" id="email">
-        </div>
-        <div class="container">
-            <label class="lab" for="email">Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <input class ="inp inp2" type="password" id="email">
-        </div>
-        <div class="container">
-            <label class="lab" for="repass">RePassword:</label>
-            <input class ="inp inp2" type="password" id="repass">
-        </div>
-        <div class="container">
-            <div class="hor">
-                <div class="gender"><label for="gender" class="lab">Gender:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</label></div>
-                <div class="radbut">
-                    <div><input class="inp2" name="gender" type="radio">&nbsp;Male</div>
-                    <div><input name="gender" class="femrad inp2" type="radio">&nbsp;Female</div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <label class="lab" for="age">Age: &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
-            <input class ="inp inp2" type="number" id="age">
-        </div>
-        <div class="container">
-            <label class="lab" for="phone">Phone: &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <input class ="inp inp2" type="number" id="phone">
-        </div>
-        <div class="container hor">
-            <label class="lab my-5" for="Address" style="margin-left: 25px; margin-right: 35px;">Address: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <textarea name="Address" class="inp2" id="" cols="54" rows="5"></textarea>
-        </div>
-        <div class="container">
-            <label class="lab" for="state">State:&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <input class ="inp inp2" type="text" id="state">
-        </div>
-        <div class="container">
-            <label class="lab" for="Country" style="position:absolute; left:168px;">Country: &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <select name="Country" class="inp2" id="Country" style="position: relative; right:100px;">
-                <option value="">Choose your country</option>
-                <option value="India">India</option>
-                <option value="Spain">Spain</option>
-                <option value="China">China</option>
-                <option value="UAE">UAE</option>
-                <option value="Russia">Russia</option>
-              </select>
-        <div class="container">
-            <label for="language" class="lab my-3" style="position: relative; right:100px;">Languages known:</label>
-            <label><input class = "inp2" type="checkbox" name="language" value="English"> English</label>
-            <label><input class = "inp2"type="checkbox" name="language" value="Kannada"> Kannada</label>
-            <label><input class = "inp2"type="checkbox" name="language" value="Hindi"> Hindi</label>
-            <label><input class = "inp2"type="checkbox" name="language" value="Telugu"> Telugu</label>
-        </div>
-        <div class="container">
-            <label style="position: relative; right:150px;"><input class="inp2" type="checkbox" name="language" style="position: relative; right:5px;" value="English"> Hereby I declare all the given details are true</label>
-        </div>
-        <div class="container"><p>Login to <a href="https://codemithra.com">Ethnus</a> website</p></div>
-        <div class="container">
-            <button class="button my-2" style="border-radius: 100px; width:100px; background-color: #F24522; color: white;">Register</button>
-        </div>
-      </div>
-    <script src="script/JST8.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <h1 style="color: darkblue;">Registration form</h1>
+    <form onsubmit="validate(event)" novalidate>
+        <table>
+            <tr>
+                <td><label for="fname">First Name</label></td>
+                <td><input type="text" name="fname" id="fname"></td>
+                <td class="hide" id="fname-msg">POOR</td>
+            </tr>
+            <tr>
+                <td><label for="lname">Last Name</label></td>
+                <td><input type="text" name="lname" id="lname"></td>
+                <td class="hide" id="lname-msg">POOR</td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="text" name="email" id="email"></td>
+                <td class="hide" id="email-msg">POOR</td>
+            </tr>
+            <tr>
+                <td><label for="pwd">Password</label></td>
+                <td><input type="text" name="pwd" id="pwd"></td>
+                <td class="hide" id="pwd-msg">POOR</td>
+            </tr>
+            <tr>
+                <td><label for="re-pwd">Re-enter Password</label></td>
+                <td><input type="text" name="re-pwd" id="re-pwd"></td>
+                <td class="hide" id="re-pwd-msg">POOR OR MISMATCH</td>
+            </tr>
+            <tr>
+                <td><label for="">Gender</label></td>
+                <td>
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Male</label>
+                    <br>
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">Female</label>
+                </td>
+                <td class="hide" id="-msg">POOR</td>
+            </tr>
+            <tr>
+                <td><label for="age">Age</label></td>
+                <td><input type="text" name="age" id="age"></td>
+                <td class="hide" id="age-msg">POOR</td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone Number</label></td>
+                <td><input type="text" name="phone" id="phone"></td>
+                <td class="hide" id="phone-msg">POOR</td>
+            </tr>
+            <tr>
+                <td><label for="addr">Address</label></td>
+                <td><textarea name="addr" id="addr" rows="6"></textarea></td>
+                <td class="hide" id="addr-msg">POOR</td>
+            </tr>
+            <tr>
+                <td><label for="state">State</label></td>
+                <td><input type="text" name="state" id="state"></td>
+                <td class="hide" id="state-msg">POOR</td>
+            </tr>
+            <tr>
+                <td><label for="country">Country</label></td>
+                <td><select name="country" id="country">
+                        <option>Choose your contry</option>
+                        <option>India</option>
+                        <option>USA</option>
+                        <option>UK</option>
+                    </select></td>
+                <td class="hide" id="country-msg">POOR</td>
+            </tr>
+            <tr>
+                <td><label for="">Languages known</label></td>
+                <td>
+                    <input type="checkbox" name="lang" id="english" value="english">
+                    <label for="english">English</label>
+                    <input type="checkbox" name="lang" id="kannada" value="kannada">
+                    <label for="kannada">Kannada</label>
+                    <input type="checkbox" name="lang" id="hindi" value="hindi">
+                    <label for="hindi">Hindi</label>
+                    <input type="checkbox" name="lang" id="tamil" value="tamil">
+                    <label for="tamil">Tamil</label>
+                </td>
+                <td class="hide" id="lang-msg">POOR</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: left; color: black; font-weight: normal;">
+                    <input type="checkbox" name="declare" id="declare">
+                    <label for="declare">Hereby I declare all the given details are true</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="font-weight: normal;">Log in to <a href="">Ethnus</a> website</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center; color: black; font-weight: normal;">
+                    <button type="submit">REGISTER</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function validate(event){
+            event.preventDefault();
+            var ids = ["fname", "lname", "email", "pwd", "re-pwd", "age", "phone", "addr", "state"];
+            ids.forEach(id => {
+                if (!document.getElementById(id).value){
+                    document.getElementById(id+"-msg").classList.remove("hide")
+                } else {
+                    document.getElementById(id+"-msg").classList.add("hide")
+                }
+            });
+        }
+    </script>
 </body>
+
 </html>

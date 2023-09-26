@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 13</title>
+    <style>
+        h2{
+            color: darkblue;
+            text-align: center;
+        }
+        .buttons {
+            margin: auto;
+            width: max-content;
+        }
+        #train {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <img src="img/train-img.png" id="train" alt="">
+    <h2>Click the follwing buttons to handle animation</h2>
+    <div class="buttons">
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+    </div>
+    <script>
+        var run = false;
+        var lenght = 0;
+        var train = document.getElementById("train");
+        var width = window.innerWidth - train.width - 10;
+        setInterval(animate, 100);
+        function animate(){
+            if (run == true){
+                lenght = (lenght + 10) % width;
+                train.style.left = `${lenght}px`;
+            }
+        }
+        function start(){
+            run = true;
+        }
+        function stop() {
+            run = false;
+        }
+    </script>
+</body>
+</html>
